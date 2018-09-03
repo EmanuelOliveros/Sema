@@ -15,12 +15,27 @@ root {
             display:  flex;
             justify-content:  center;
             flex-wrap:  wrap;
+            background: crimson;
+            margin-left:10%;
+            margin-right:10%;
+            margin-top: 1%;
+            
+        }
+        h1{
+             margin-left:10%;
+            margin-right:10%;
+            margin-top: 1%;
         }
 .elemento {
             margin: 1rem;
         }
 .elemento>img {
             width: 200px;
+        }
+        .elemento>.nombre{
+            background: #FFF;
+            text-align: center;
+            font-family: cursive;
         }
 body
 {

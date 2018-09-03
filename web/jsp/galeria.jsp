@@ -53,7 +53,7 @@
 
         <div class="elemento">
             <img src="<%= imagen.ruta %>">
-            <div><%= imagen.nombre %></div>
+            <div class="nombre"><%= imagen.nombre %></div>
         </div>
         <%
         }%>
