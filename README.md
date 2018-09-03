@@ -9,3 +9,5 @@ editado por Emanuel
 css de la galeria
 
 Centrado de imgs
+
+Footer
