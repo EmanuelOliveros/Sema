@@ -8,21 +8,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/estilosgaleria.css" />
         <title>Galería</title>
-        <style>
-        .contenedor {
-            display:  flex;
-            justify-content:  center;
-            flex-wrap:  wrap;
-        }
-        .elemento {
-            margin: 1rem;
-        }
-        .elemento>img {
-            width: 200px;
-        }
-    </style>
     </head>
     <body>
         <span class="border border-primary"></span>

@@ -1,0 +1,79 @@
+/* 
+    Document   : estilosgaleria
+    Created on : 3/09/2018, 09:35:59 AM
+    Author     : Usuario
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+    
+}
+
+.contenedor {
+            display:  flex;
+            justify-content:  center;
+            flex-wrap:  wrap;
+        }
+.elemento {
+            margin: 1rem;
+        }
+.elemento>img {
+            width: 200px;
+        }
+body
+{
+	background-image:url(../imagenes/fondo.jpg);
+}
+.logotipo{
+    margin-left:2%;
+    margin-top: 2%;
+	width: 500px;
+	height: 230px;
+    }
+
+.buscar{
+   
+    margin-right: 5%;
+}
+.header {
+    margin-left:10%;
+    margin-right:10%;
+    margin-top: 1%;
+    background-color:crimson;
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+}
+nav{
+    display: flex;
+    justify-content: flex-start;
+}
+header nav
+{
+    margin-left:10%;
+    margin-right:10%;
+    margin-top: 1%;
+	background:azure;
+    overflow:hidden;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header nav ul li a
+{
+	padding:10px 20px; /*distancia entre elementos de la lista*/
+	display:block;
+	color:#000;
+	text-decoration:none;
+}
+header nav ul li a:hover{
+    background: crimson;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
