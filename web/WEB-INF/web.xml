@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ProductoController</servlet-name>
+        <servlet-class>controladores.ProductoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductoController2</servlet-name>
+        <servlet-class>controladores.ProductoController2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Index</servlet-name>
+        <servlet-class>controladores.Index</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Galeria</servlet-name>
+        <servlet-class>controladores.Galeria</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Inicio</servlet-name>
+        <servlet-class>controladores.Inicio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Acerca</servlet-name>
+        <servlet-class>controladores.Acerca</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Categorias</servlet-name>
+        <servlet-class>controladores.Categorias</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ProductoController</servlet-name>
+        <url-pattern>/ProductoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductoController2</servlet-name>
+        <url-pattern>/ProductoController2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Index</servlet-name>
+        <url-pattern>/Index</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Galeria</servlet-name>
+        <url-pattern>/Galeria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Inicio</servlet-name>
+        <url-pattern>/Inicio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Acerca</servlet-name>
+        <url-pattern>/Acerca</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Categorias</servlet-name>
+        <url-pattern>/Categorias</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
