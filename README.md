@@ -11,3 +11,5 @@ css de la galeria
 Centrado de imgs
 
 Footer
+
+cambios alv
