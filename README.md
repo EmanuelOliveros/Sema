@@ -13,3 +13,5 @@ Centrado de imgs
 Footer
 
 cambios alv
+
+cambios alv x2
