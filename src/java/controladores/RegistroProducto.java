@@ -6,6 +6,13 @@ package controladores;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,6 +39,10 @@ public class RegistroProducto extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         RequestDispatcher rd = request.getRequestDispatcher("jsp/producto.jsp");
+        rd.forward(request, response);
+        String nombre = request.getParameter("nombre");
+        String ruta = request.getParameter("ruta");
+        guardarImagen(nombre, ruta);
         rd.forward(request, response);
     }
 
@@ -75,4 +86,20 @@ public class RegistroProducto extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+    
+    private void guardarImagen(String nombre, String ruta) {
+        try {
+            System.out.println(nombre + "|separador|" + ruta);
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `ejemplo`.`imagenes` (`nombre`, `ruta`) VALUES (?, ?)");
+            ps.setString(1, nombre);
+            ps.setString(2, ruta);
+            ps.execute();
+        } catch (ClassNotFoundException ex) {
+                Logger.getLogger(RegistroProducto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(RegistroProducto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

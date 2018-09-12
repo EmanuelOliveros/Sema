@@ -38,5 +38,11 @@
                    </nav>
         <br>
         </header>
+        <h1>Formulario para nuevas imágenes de la galeria</h1>
+        <form name="nueva-imagen" action="NuevaImagen" method="POST">
+            <span>nombre</span><input type="text" name="nombre" />
+            <span>ruta</span><input type="text" name="ruta" />
+            <button type="submit">Guardar imagen</button>
+        </form>
     </body>
 </html>
