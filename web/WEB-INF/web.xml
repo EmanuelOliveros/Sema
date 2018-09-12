@@ -28,7 +28,10 @@
         <servlet-name>Categorias</servlet-name>
         <servlet-class>controladores.Categorias</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>RegistroProducto</servlet-name>
+        <servlet-class>controladores.RegistroProducto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProductoController</servlet-name>
         <url-pattern>/ProductoController</url-pattern>
@@ -57,7 +60,10 @@
         <servlet-name>Categorias</servlet-name>
         <url-pattern>/Categorias</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>RegistroProducto</servlet-name>
+        <url-pattern>/RegistroProducto</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
