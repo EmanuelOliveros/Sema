@@ -39,10 +39,10 @@
         <br>
         </header>
         <h1>Formulario para nuevas imágenes de la galeria</h1>
-        <form name="nueva-imagen" action="NuevaImagen" method="POST">
+        <form name="nuevo-producto" action="http://localhost:8080/WebApplication1/RegistroProducto" method="POST">
             <span>nombre</span><input type="text" name="nombre" />
             <span>ruta</span><input type="text" name="ruta" />
-            <button type="submit">Guardar imagen</button>
+            <button type="submit">Guardar producto</button>
         </form>
     </body>
 </html>

@@ -42,7 +42,7 @@ public class RegistroProducto extends HttpServlet {
         rd.forward(request, response);
         String nombre = request.getParameter("nombre");
         String ruta = request.getParameter("ruta");
-        guardarImagen(nombre, ruta);
+        guardarProducto(nombre, ruta);
         rd.forward(request, response);
     }
 
@@ -87,12 +87,12 @@ public class RegistroProducto extends HttpServlet {
         return "Short description";
     }// </editor-fold>
     
-    private void guardarImagen(String nombre, String ruta) {
+    private void guardarProducto(String nombre, String ruta) {
         try {
             System.out.println(nombre + "|separador|" + ruta);
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `ejemplo`.`imagenes` (`nombre`, `ruta`) VALUES (?, ?)");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/sema", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `sema`.`producto` (`nombre`, `ruta`) VALUES (?, ?) ");
             ps.setString(1, nombre);
             ps.setString(2, ruta);
             ps.execute();
