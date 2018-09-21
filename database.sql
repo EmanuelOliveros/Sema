@@ -51,4 +51,4 @@ CREATE TABLE `sema`.`registrousuario` (
   `contraseña` VARCHAR(45) NULL,
   PRIMARY KEY (`idRegistroUsuario`));
   ALTER TABLE `sema`.`registrousuario` 
-ADD COLUMN `email` VARCHAR(45);
+ADD COLUMN `email` VARCHAR(45) ;
