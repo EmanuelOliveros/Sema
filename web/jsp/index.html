@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>   
+        <div class="header">
+            <div class="logotipo">
+                <img src="imagenes/logo.png"/>
+            </div>
+            <div class="buscar">       
+                <input type="text" name="buscar" placeholder="Buscar"/>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080/WebApplication1/Inicio" >INICIO</a></li>
+                <li><a href="http://localhost:8080/WebApplication1/Categorias">CATEGORÍAS</a></li>
+                <li><a href="http://localhost:8080/WebApplication1/Acerca">ACERCA DE</a></li>
+                <li><a href="http://localhost:8080/WebApplication1/Index">CONTÁCTENOS</a></li>
+                <li><a href="http://localhost:8080/WebApplication1/Galeria">GALERÍA</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="principal">
+        <section class="opciones">
+            <article>
+                <h2>Otras opciones</h2>
+                <div class="container">
+                    <form onSubmit="enviar(event, this)">
+                        <div class="form-group">
+                            <label  for="exampleInputEmail1">Usuario</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="UsuarioHelp" placeholder="Ingrese su usuario">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Aceptar condiciones</label>
+                        </div>
+                            <button type="submit" class="btn btn-danger">enviar</button>
+                            <a class="button" href="file:///C:/Users/Usuario/Documents/GitHub/Sema/web/jsp/registro.html">Ir a registro</a>
+                    </form>
+
+                   
+        <aside>
+                <p><h2>Información</h2></p>
+
+                <p>Número de contacto: #</p>
+          
+                <p><h3>Artífices</h3></p>
+          
+                <p>Santiago Gaviria</p>
+          
+                <p>Emanuel Oliveros</p>
+          
+                <p>Adrian camilo</p>
+          
+                <p>Juan David Cossio</p>
+
+                <p><h2>Panel de Comentarios</h2></p>
+      <textarea item-height="500px">
+      </textarea>
+      <br/>
+      <button type="sumbit" class="btn btn-dark">enviar</button>
+          
+        </aside>
+    </section>
+    <footer>
+        <p>Developmen - By SEMA </p>
+    </footer>
+</body>
+</html>
