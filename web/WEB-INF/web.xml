@@ -36,6 +36,10 @@
         <servlet-name>Compra</servlet-name>
         <servlet-class>controladores.Compra</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistroUsuario</servlet-name>
+        <servlet-class>controladores.RegistroUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProductoController</servlet-name>
         <url-pattern>/ProductoController</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>Compra</servlet-name>
         <url-pattern>/Compra</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroUsuario</servlet-name>
+        <url-pattern>/RegistroUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

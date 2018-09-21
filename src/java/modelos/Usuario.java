@@ -8,8 +8,6 @@ package modelos;
  *
  * @author Usuario
  */
-public class Imagen {
-    public String nombre;
-    public String ruta;
-    public int tipo;
+public class Usuario {
+    
 }

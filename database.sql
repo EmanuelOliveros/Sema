@@ -44,3 +44,11 @@ CREATE TABLE `sema`.`producto` (
   `ruta` VARCHAR(200) NULL,
   PRIMARY KEY (`idproducto`),
   UNIQUE INDEX `imagenescol_UNIQUE` (`ruta` ASC));
+  
+CREATE TABLE `sema`.`registrousuario` (
+  `idRegistroUsuario` INT NOT NULL AUTO_INCREMENT,
+  `usuario` VARCHAR(45) NULL,
+  `contraseña` VARCHAR(45) NULL,
+  PRIMARY KEY (`idRegistroUsuario`));
+  ALTER TABLE `sema`.`registrousuario` 
+ADD COLUMN `email` VARCHAR(45) ;

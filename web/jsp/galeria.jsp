@@ -39,6 +39,24 @@
        </nav>
         <br>
     </header>
+        <%@page import="java.util.List" %>
+        <%@page import="modelos.tipo" %>
+        <%
+        List<tipo> listaTipos = (List<tipo>)request.getAttribute("tipos");
+        %>
+        <h1>Formulario para nuevas imágenes de la galeria</h1>
+        <form name="nueva-imagen" action="NuevaImagen" method="POST">
+            <span>nombre</span><input type="text" name="nombre" />
+            <span>ruta</span><input type="text" name="ruta" />
+            <span>tipo</span>
+            <select name="tipo">
+                <%
+                for(Tipo i : listaTipos) {%>
+                <option value="<%= i.id%>"><%= i.nombre%></option>
+                <%
+                }%>
+            </select>
+            <button type="submit">Guardar imagen</button>
     <%@page import="java.util.List" %>
     <%@page import="modelos.Imagen" %>
     <%
@@ -55,6 +73,7 @@
         <div class="elemento">
             <img src="<%= imagen.ruta %>">
             <div class="nombre"><%= imagen.nombre %></div>
+            <div class="tipo"><%= imagen.tipo %></div>
         </div>
         <%
         }%>
