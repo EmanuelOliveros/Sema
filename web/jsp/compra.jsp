@@ -70,7 +70,7 @@
         }
         
         .principal .section {
-            background-image: url("https://cdn.shopify.com/s/files/1/0374/5725/files/Shop_Wall.jpg?16880021683970843960");
+            background-image: url("https://images.pexels.com/photos/886465/pexels-photo-886465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
             padding: 215px 10px 225px;
         }
 
@@ -106,6 +106,7 @@
             .formulario_compra {
                 display: flex;
                 margin: 2%;
+                background-color:rgba(255,2555,255,.8);
             }
             .Datos_personales {
                 margin: 2%;
@@ -122,6 +123,7 @@
             .enviar {
                 text-align: center;
             }
+            
         </style>
     </head>
     <body>
@@ -155,72 +157,73 @@
             </div>
         </div>
         <div class="section">
-            <form action="">
+            <form action="Compra" method="POST">
                 <div class="formulario_compra">
                     <div class="Datos_personales">
                         <h2>Datos personales</h2>
                         <div>
                             <h5>E-mail</h5>
-                            <input type="email" placeholder="E-mail">
+                            <input type="email" name="email" placeholder="E-mail">
                         </div>
                         <div>
                             <h5>Nombre completo</h5>
-                            <input type="text" placeholder="Nombre completo de quién recibe el producto">
+                            <input type="text" name="nombre" placeholder="Nombre completo de quién recibe el producto">
                         </div>
                         <div>
                             <h5>Teléfono</h5>
-                            <input type="text" placeholder="número de quién recibe el producto">
+                            <input type="text" name="telefono" placeholder="número de quién recibe el producto">
                         </div>
                     </div>
                     <div class="dirección">
                         <h2>Dirección de envío</h2>
                         <div>
                             <h5>País</h5>
-                            <select>
-                                <option value="">Selecciona el país</option>
-                                <option value="">Colombia</option>
+                            <select name="pais" >
+                                <option value="no-select">Selecciona el país</option>
+                                <option value="Colombia">Colombia</option>
                             </select>
                         </div>
                         <div>
                             <h5>Ciudad</h5>
-                            <select>
-                                <option value="">Selecciona la ciudad</option>
-                                <option value="">Medellín</option>
-                                <option value="">Bogotá</option>
-                                <option value="">Cali</option>
-                                <option value="">Barranquilla</option>
+                            <select name="ciudad">
+                                <option value="no-select">Selecciona la ciudad</option>
+                                <option value="Medellin">Medellín</option>
+                                <option value="Bogota">Bogotá</option>
+                                <option value="Cali">Cali</option>
+                                <option value="Barranquilla">Barranquilla</option>
                             </select>
                         </div>
                         <h5>Dirección de la residencia</h5>
                         <div>
-                            <input type="text" placeholder="digite su dirección de residencia">
+                            <input type="text" name="direccion" placeholder="digite su dirección de residencia">
                         </div>
                     </div>
                     <div class="confirmar_producto">
                         <h2>Confirmar producto</h2>
                         <div>
                             <h5>Nombre del producto</h5>
-                            <input type="text" placeholder="digite el nombre del producto">
+                            <input type="text" name="nombre_producto" placeholder="digite el nombre del producto">
                         </div>
                         <div>
                             <h5>Especificaciones del producto</h5>
-                            <input type="text" placeholder="digite las especificaciones del producto">
+                            <input type="text" name="especificacion_producto" placeholder="digite las especificaciones del producto">
                         </div>
                         <div>
                             <h5>Cantidad a pedir</h5>
-                            <input type="text" placeholder="Digite la cantidad de productos">
+                            <input type="text" name="cantidad" placeholder="Digite la cantidad de productos">
                         </div>
+                        
                     </div>
                     <div class="metodo_de_pago">
                         <h2>Método de pago</h2>
                         <div>
                             <h5>¿Cómo quieres pagar?</h5>
-                            <select>
-                                <option value="">Selecciona método de pago</option>
-                                <option value="">Paypal</option>
-                                <option value="">Tarjeta de crédito</option>
-                                <option value="">Efectivo</option>
-                                <option value="">- otro -</option>
+                            <select name="metodo_pago">
+                                <option value="no-select">Selecciona método de pago</option>
+                                <option value="paypal">Paypal</option>
+                                <option value="tarjeta">Tarjeta de crédito</option>
+                                <option value="efectivo">Efectivo</option>
+                                <option value="otro">- otro -</option>
                             </select>
                         </div>
                         <div>
@@ -228,8 +231,8 @@
                             <input type="text" placeholder="Digite recomendaciones adicionales">
                         </div>
                         <div>
-                            <h5>Confirmar método</h5>
-                            <input type="checkbox"><input type="submit">
+                            <h5>Costo</h5>
+                            <input type="text" name="costo" placeholder="Digite el costo del producto">
                         </div>
                     </div>
                 </div>

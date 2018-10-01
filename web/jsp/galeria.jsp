@@ -174,8 +174,7 @@
                         <li><a href="#" class="link">CONTACTO</a></li>
                         <li><a href="Galeria" class="link">GALERIA DE PRODUCTOS</a></li>
                         <li><a href="Compra" class="link">COMPRAR</a></li>
-
-
+                        
                         
                     </ul>
                     <div class="login">
