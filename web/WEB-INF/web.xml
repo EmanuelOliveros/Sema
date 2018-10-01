@@ -40,6 +40,14 @@
         <servlet-name>RegistroUsuario</servlet-name>
         <servlet-class>controladores.RegistroUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Tipo</servlet-name>
+        <servlet-class>modelos.Tipo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>guardarproducto</servlet-name>
+        <servlet-class>controladores.guardarproducto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProductoController</servlet-name>
         <url-pattern>/ProductoController</url-pattern>
@@ -79,6 +87,14 @@
     <servlet-mapping>
         <servlet-name>RegistroUsuario</servlet-name>
         <url-pattern>/RegistroUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Tipo</servlet-name>
+        <url-pattern>/Tipo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>guardarproducto</servlet-name>
+        <url-pattern>/guardarproducto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

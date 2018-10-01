@@ -56,11 +56,9 @@ public class Galeria extends HttpServlet {
             while(resultados.next()) {
                 String nombre = resultados.getString("nombre");
                 String ruta = resultados.getString("ruta");
-                int tipo = resultados.getInt("tipo");
                 Imagen i = new Imagen();
                 i.nombre = nombre;
                 i.ruta = ruta;
-                i.tipo = tipo;
                 listaImagenes.add(i);
             }
             conexion.close();
