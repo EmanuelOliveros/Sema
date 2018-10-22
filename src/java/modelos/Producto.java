@@ -8,11 +8,7 @@ package modelos;
  *
  * @author Usuario
  */
-public class Imagen {
-    
-    public int idimagenes;
+public class Producto {
     public String nombre;
-    public String ruta;
-    public String precio;
-    public int idproductos;
+    public int precio;
 }
