@@ -20,11 +20,14 @@ CREATE TABLE `sema`.`imagenes` (
 
 INSERT INTO `sema`.`imagenes` (`nombre`, `ruta`) VALUES ('?', '?');
 
-CREATE TABLE `sema`.`producto` (
-  `idproducto` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NULL,
-  `ruta` VARCHAR(200) NULL,
-  PRIMARY KEY (`idproducto`));
+CREATE TABLE `sema`.`productos` (
+  `idproductos` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(200) DEFAULT NULL,
+  `precio` varchar(200) DEFAULT NULL,
+  `tipo` int(11) DEFAULT 1 NULL,
+  PRIMARY KEY (`idproductos`)
+);
+
   
 CREATE TABLE `sema`.`registrousuario` (
   `idRegistroUsuario` INT NOT NULL AUTO_INCREMENT,
@@ -52,3 +55,22 @@ CREATE TABLE `sema`.`compra` (
   `metodo_de_pago` VARCHAR(45) NULL,
   `costo` VARCHAR(45) NULL,
   PRIMARY KEY (`idcompra`));
+
+CREATE TABLE `sema`.`tipo` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Moda');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Calzado');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Tecnología');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Deportes');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Audio y Video');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Electrodomesticos');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Video Juegos');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Servicios');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Arte');
+INSERT INTO `sema`.`tipo` (`nombre`) VALUES ('Herramientas');
+
+
+INSERT INTO `ejemplo`.`tipo` (`nombre`) VALUES ('Salud y Belleza');

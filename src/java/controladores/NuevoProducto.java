@@ -102,8 +102,8 @@ public class NuevoProducto extends HttpServlet {
     private void guardarImagen(String nombre, String precio, int tipo) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `ejemplo`.`productos` (`nombre`, `precio`, tipo) VALUES (?, ?, ?)");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/sema", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `sema`.`productos` (`nombre`, `precio`, tipo) VALUES (?, ?, ?)");
             ps.setString(1, nombre);
             ps.setString(2, precio);
             ps.setInt(3, tipo);
@@ -119,7 +119,7 @@ public class NuevoProducto extends HttpServlet {
         List<Tipo> listaTipos = new ArrayList<Tipo>();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/sema", "root", "");
             PreparedStatement ps = conexion.prepareStatement("SELECT * FROM tipo");
             ResultSet resultados = ps.executeQuery();
             while(resultados.next()) {
@@ -143,7 +143,7 @@ public class NuevoProducto extends HttpServlet {
         List<Imagen> listaImagenes = new ArrayList<Imagen>();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/sema", "root", "");
             PreparedStatement ps = conexion.prepareStatement("SELECT * FROM productos");
             ResultSet resultados = ps.executeQuery();
             while(resultados.next()) {
@@ -168,8 +168,8 @@ public class NuevoProducto extends HttpServlet {
     private void actualizarImagen(int idproductos, String nombre, String precio, int tipo) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("UPDATE `ejemplo`.`productos` SET `nombre` = ?, `precio` = ?, `tipo` = ? WHERE `idproductos` = ?");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/sema", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("UPDATE `sema`.`productos` SET `nombre` = ?, `precio` = ?, `tipo` = ? WHERE `idproductos` = ?");
             ps.setString(1, nombre);
             ps.setString(2, precio);
             ps.setInt(3, tipo);
