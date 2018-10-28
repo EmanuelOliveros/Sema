@@ -16,6 +16,7 @@ CREATE TABLE `sema`.`imagenes` (
   `idimagenes` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
   `ruta` VARCHAR(200) NULL,
+  `tipo` int(11) DEFAULT 1 NULL,
   PRIMARY KEY (`idimagenes`));
 
 INSERT INTO `sema`.`imagenes` (`nombre`, `ruta`) VALUES ('?', '?');
