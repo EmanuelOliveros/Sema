@@ -171,7 +171,18 @@
         footer p{
             margin-top: 1.2%;
         }
-       
+       .contenedor {
+            display:  flex;
+            justify-content:  center;
+            flex-wrap:  wrap;
+        }
+        .elemento {
+            margin: 1rem;
+        }
+        .elemento img {
+            width: 200px;
+            height: 180px;
+        }
     </style>
     
 </head>
@@ -214,7 +225,7 @@
             <%
                 List<Imagen> listaImagenes = (List<Imagen>)request.getAttribute("imagenes");
             %>
-            <h1>Galería de imágenes</h1>
+            <h1>Galería de categorias</h1>
             <div class="contenedor">
         
             <%
@@ -224,7 +235,7 @@
 
             <div class="elemento">
                 <img src="<%= imagen.ruta %>">
-                <div><%= imagen.nombre %></div>
+                <div><%= imagen.categoria %></div>
             </div>
             <%
             }%>

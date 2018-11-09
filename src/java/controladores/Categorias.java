@@ -51,21 +51,21 @@ public class Categorias extends HttpServlet {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/sema", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("SELECT * FROM slider");
+            PreparedStatement ps = conexion.prepareStatement("SELECT * FROM categorias");
             ResultSet resultados = ps.executeQuery();
             while(resultados.next()) {
-                String nombre = resultados.getString("nombre");
+                String categoria = resultados.getString("categoria");
                 String ruta = resultados.getString("ruta");
                 Imagen i = new Imagen();
-                i.nombre = nombre;
+                i.categoria = categoria;
                 i.ruta = ruta;
                 listaImagenes.add(i);
             }
             conexion.close();
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Galeria.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Categorias.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Galeria.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Categorias.class.getName()).log(Level.SEVERE, null, ex);
         }
         return listaImagenes;
     }

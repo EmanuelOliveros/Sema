@@ -15,4 +15,6 @@ public class Imagen {
     public String ruta;
     public String precio;
     public int idproductos;
+    public String categoria;    
+
 }

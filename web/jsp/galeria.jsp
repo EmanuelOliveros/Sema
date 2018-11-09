@@ -134,6 +134,19 @@
             margin: 0;
             padding: 20px 10px;
         }
+        .contenedor {
+            display:  flex;
+            justify-content:  center;
+            flex-wrap:  wrap;
+             margin-top: 10%;
+        }
+        .elemento {           
+            margin: 1rem;
+        }
+        .elemento img {
+            width: 200px;
+            height: 180px;
+        }
         </style>
     </head>
     <body>
@@ -214,8 +227,7 @@
                         <%
                         }%>
                     </tbody>
-                </table>
-                    
+                </table>                    
                 <script>
                     function editarImagen(id, nombre, ruta){
                         //alert(id + " " + nombre + " " + ruta);
@@ -228,6 +240,21 @@
                         inputRuta.value = ruta;
                     }
                 </script>
+                
+                <div class="contenedor">
+        
+            <%
+                Imagen imagen;
+                for(int i = 0; i < listaImagenes.size(); i++){
+                imagen = listaImagenes.get(i);%>
+
+            <div class="elemento">
+                <img src="<%= imagen.ruta %>">
+                <div><%= imagen.nombre %></div>
+            </div>
+            <%
+            }%>
+        </div>
             </div>   
         s</div>
     </body>
