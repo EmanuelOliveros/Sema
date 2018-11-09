@@ -244,6 +244,6 @@
     <footer>
             <p>Developmen - By SEMA </p>
     </footer>
-        
+    </div>
     </body>
 </html>
