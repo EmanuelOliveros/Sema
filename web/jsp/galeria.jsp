@@ -49,9 +49,124 @@
                 margin-top:5%;
                 margin-left: 15%;
             }
+            
+            .principal .header {
+            display: flex;
+            flex-flow: column;
+        }
+        .principal .header .uno{
+            text-align: center;
+            background: black;
+            height: 55px;
+            width: 100%;
+            font-family: inherit;
+        }
+        .principal .header .nav {
+            display: flex;
+            justify-content: space-between;     
+            height: 75px;
+        }
+        .principal .header .nav ul {
+            display: flex;
+            flex-direction: row;
+            
+        }        
+        .principal .header .nav ul li{
+            overflow: hidden;
+        }        
+        .principal .header .nav ul li a{
+            text-decoration: none;
+        }        
+        .principal .header .nav ul li a:hover{
+            background-color: black;
+            
+            color: #fff;
+            
+            
+        }      
+        .principal .header .uno .texto {
+            margin-top: 1%;
+        }
+        .principal .header .nav .link{
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 1px;
+            color: #000;
+            border: none;
+            margin-top: 25px;
+            padding: 8px 15px 9px;
+            
+        }
+        
+        .principal .section {
+            background-image: url("https://images.pexels.com/photos/886465/pexels-photo-886465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            padding: 215px 10px 225px;
+        }
+
+        .principal .header .nav .logo{
+            margin-left:5%;
+
+            
+        }
+        .button.darkk{
+            color: #000;
+            border:2px solid #000;
+        }    
+        .nav .logo a:hover{
+            font-size:20px;
+            color: crimson;
+            border-color:crimson;
+            text-decoration: none;
+        }
+        .principal .header .nav .logo{
+            margin-top: 1.5%;
+        }
+        .button{
+            font-family: nimbus-sans,sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 0;
+            padding: 20px 10px;
+        }
         </style>
     </head>
     <body>
+        <div class="principal">
+            <div class="header">
+            <div class="uno">
+                <div class="texto">
+                    <font color="white">Join the Mailing List for your 10% Discount Code! </font>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="logo">
+                        <h4><a class="button darkk" href="Inicio">SEMA-WEBSITE</a></h4>
+                </div>
+                    <ul>
+                        <li><a href="Inicio" class="link"> INICIO</a></li>
+                        <li><a href="Categorias" class="link">CATEGORIAS</a></li>
+                        <li><a href="Acerca" class="link">ACERCA DE</a></li>
+                        <li><a href="Index" class="link">CONTACTO</a></li>
+                        <li><a href="Galeria" class="link">GALERIA DE PRODUCTOS</a></li>
+                        <li><a href="#" class="link">COMPRAR</a></li>
+                        <li><a href="NuevoProducto" class="link">NUEVO PRODUCTO</a></li>
+
+                        
+                    </ul>
+                    <div class="login">
+                        <ul>
+                        <li class="customers"><a href="#" class="link">LOGIN</a></li>
+                        <li class="customers"><a href="RegistroUsuario" class="link">CREATE ACCOUNT</a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>        
         
         <%@page import="java.util.List" %>
         <%@page import="modelos.Tipo" %>
@@ -113,6 +228,7 @@
                         inputRuta.value = ruta;
                     }
                 </script>
-            </div>    
+            </div>   
+        s</div>
     </body>
 </html>
