@@ -48,6 +48,10 @@
         <servlet-name>ProductoController</servlet-name>
         <servlet-class>controladores.ProductoController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Pag_Productos</servlet-name>
+        <servlet-class>controladores.Pag_Productos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>ProductoController</servlet-name>
         <url-pattern>/ProductoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Pag_Productos</servlet-name>
+        <url-pattern>/Pag_Productos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
