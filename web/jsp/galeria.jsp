@@ -167,7 +167,7 @@
                         <li><a href="Acerca" class="link">ACERCA DE</a></li>
                         <li><a href="Index" class="link">CONTACTO</a></li>
                         <li><a href="Galeria" class="link">GALERIA DE PRODUCTOS</a></li>
-                        <li><a href="#" class="link">COMPRAR</a></li>
+                        <li><a href="Compra" class="link">COMPRAR</a></li>
                         <li><a href="NuevoProducto" class="link">NUEVO PRODUCTO</a></li>
 
                         
