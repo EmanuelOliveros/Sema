@@ -30,13 +30,14 @@ CREATE TABLE `sema`.`productos` (
 );
 
   
-CREATE TABLE `sema`.`registrousuario` (
-  `idRegistroUsuario` INT NOT NULL AUTO_INCREMENT,
-  `usuario` VARCHAR(45) NULL,
-  `contraseña` VARCHAR(45) NULL,
-  PRIMARY KEY (`idRegistroUsuario`));
-  ALTER TABLE `sema`.`registrousuario` 
-ADD COLUMN `email` VARCHAR(45) ;
+CREATE TABLE `sema`.`registros` (
+  `idregistros` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(200)  DEFAULT NULL,
+  `usuario` VARCHAR(200)  DEFAULT NULL,
+  `contraseña` VARCHAR(200) NULL,
+  PRIMARY KEY (`idregistros`));
+
+
 
 INSERT INTO `sema`.`galeria` (`nombre`, `ruta`) VALUES ('img1', 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
 INSERT INTO `sema`.`galeria` (`nombre`, `ruta`) VALUES ('img2', 'https://images.pexels.com/photos/163007/phone-old-year-built-1955-bakelite-163007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');

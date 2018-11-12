@@ -9,5 +9,8 @@ package modelos;
  * @author Usuario
  */
 public class Usuario {
-    
+    public int idregistros;
+    public String usuario;
+    public String email;
+    public String contraseña;
 }

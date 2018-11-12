@@ -120,10 +120,24 @@
             display:flex;
             flex-direction: row;
         }
+         .tabla table {
+          
+          margin-top: 3%;
+          width: 100px;
+        }
+         .edit {
+            width: 50px;
+            height: 50px;
+        }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+     <%@page import="java.util.List" %>     
+        <%@page import="modelos.Usuario" %>
+        <%        
+        List<Usuario> listaUsuarios = (List<Usuario>)request.getAttribute("usuarios");
+        %>
     <div class="principal">
         <div class="header">
             <div class="uno">
@@ -160,27 +174,61 @@
     <h2 class="titulo">Registro</h2>
     <h4>Crear cuenta</h4>
     
-    <form action="RegistroUsuario">
+    <form name="nueva-registro" action="RegistroUsuario" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
-            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
+            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese su email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
                 <label for="exampleInputEmail1">Usuario</label>
-                <input name="usuario" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="UsuarioHelp" placeholder="Ingrese su usuario">
+                <input name="usuario" type="text" class="form-control" id="usuario" aria-describedby="UsuarioHelp" placeholder="Ingrese su usuario">
                 
             </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input name="contrasena" type="password" class="form-control" placeholder="Ingrese su contraseña">
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
+            <input name="contraseña" type="password" class="form-control" placeholder="Ingrese su contraseña">
+        </div>        
         <button type="submit" class="btn btn-danger">Enviar</button>
     </form>
-
+    
+    
+    <table border="1" class="table table-hover table-dark"">
+                    <thead>
+                        <tr>
+                            <th scope="col">id producto</th>
+                            <th scope="col">nombre del producto</th>
+                            <th scope="col">precio</th>
+                            <th scope="col">editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                        for(Usuario i : listaUsuarios) {%>
+                        <tr>
+                            <td class="bg-primary"><%= i.idregistros%></td>
+                            <td class="bg-success"><%= i.email%></td>
+                            <td class="bg-danger"><%= i.usuario%></td>
+                            <td class="bg-danger"><%= i.contraseña%></td>
+                            <td class="bg-info"><image class="edit" onclick="editarImagen(<%= i.idregistros%>, '<%= i.email%>', '<%= i.usuario%>', '<%= i.contraseña%>')" src="https://icon-icons.com/icons2/906/PNG/512/pencil_icon-icons.com_69999.png" /></td>
+                        </tr>
+                        <%
+                        }%>
+                    </tbody>
+                </table>
+                <script>
+                    function editarImagen(id, email,usuario, contraseña){
+                        //alert(id + " " + nombre + " " + ruta);
+                        var inputId = document.getElementById("idregistros");
+                        var inputEmail = document.getElementById("email");
+                        var inputUsuario = document.getElementById("usuario");
+                        var inputContraseña = document.getElementById("contraseña");
+                    
+                        inputId.value = id;
+                        inputEmail.value = email;
+                        inputUsuario.value = usuario;
+                        inputContraseña.value = contraseña;
+                    }
+               </script>
 </body>
 </html>
